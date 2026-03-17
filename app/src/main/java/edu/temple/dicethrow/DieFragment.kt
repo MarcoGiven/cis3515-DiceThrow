@@ -59,4 +59,12 @@ class DieFragment : Fragment() {
 
         outState.putInt(ROLL_KEY, currentRoll)
     }
+
+    companion object {
+        fun newInstance (sides: Int) = DieFragment().apply {
+            arguments = Bundle().apply {
+                putInt(DIESIDE, sides)
+            }
+        }
+    }
 }
