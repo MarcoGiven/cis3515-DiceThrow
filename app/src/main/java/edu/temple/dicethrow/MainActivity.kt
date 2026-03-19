@@ -21,12 +21,13 @@ class MainActivity : AppCompatActivity() {
                 .beginTransaction()
                 .add(R.id.fragmentContainerView, DieFragment())
                 .commit()
-        } else {
-            findViewById<Button>(R.id.rollDiceButton).setOnClickListener {
-                dieViewModel.throwDie()
-            }
         }
 
+        findViewById<Button>(R.id.rollDiceButton).setOnClickListener {
+            dieViewModel.throwDie()
+        }
 
     }
+
+
 }
